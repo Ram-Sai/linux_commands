@@ -1,2 +1,2 @@
 # Linux_commands
-files related to linux commands
+# will update all the linux commands in this repository
