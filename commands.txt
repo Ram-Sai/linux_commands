@@ -1,0 +1,67 @@
+chmod (4 Read Permission, 2	Write Permission, 1	Execute Permission// `r`	Read permission, `w`	Write permission, `x`	Execute permission)
+  it can take attributes like  
+`-R`	Apply the permission change recursively to all the files and directories within the specified directory.
+`-v`	It will display a message for each file that is processed. while indicating the permission change that was made.
+`-c`	It works same as `-v` but in this case it only displays messages for files whose permission is changed.
+`-f`	It helps in avoiding display of error messages.
+`-h`	Change the permissions of symbolic links instead of the files they point to.
+
+  Operators	Definition
+`+`	Add permissions
+`-`	Remove permissions
+`=`	Set the permissions to the specified values
+
+Reference	Class
+u	Owner
+g	Group
+o	Others
+a	All (owner,groups,others)
+
+ex: Read, write and execute permissions to the file owner: chmod u+rwx [file_name]
+  Remove write permission for the group and others: chmod go-w [file_name]
+
+
+Check Current Permissions
+Use the `ls` command with the `-l` option to list the files in the directory along with their permissions. This step helps you identify the current permissions of your script:
+ls -l
+
+ls -a displays hidden files
+ls -ltr also displays the files with details and permissions
+
+Touch is used to create files
+ex: touch t1 t2 t3 will create 3 files
+
+touch read {1..20} will create 20 read files like touch1 touch2 touch3 soo on till touch20
+
+* is a wild card 
+  ls r* will display the files that start with r
+
+? is a wild card
+  ls read1? will display all the files that start with read1 and has one more charecter after that
+
+[] is also a wild card
+ls l[abcdio]st.sh will display the files with that word combinations
+
+> can be used for redirection. ls > lol.txt will put the output of ls command to lol.txt file
+>> will be used in the same way but it will append to the existing data within that file
+
+| is the command used to to use the output of prev command and use it for the next command
+
+cat command is used to view the file contents
+
+vi, vim, nano are used to create a file in edit mode
+
+head -4 will get the first 4 lines of the file
+
+tail -4 will display the lat 4 lines of the file
+
+wc will give word count
+wc-l will give the word count of the file
+
+grep command is used to search for anything  and it can be used in combination with other commands
+
+grep "nexon" cars.txt -n will give the number of lines where this text appears
+
+grep nexon cars,txt -v-n will display the cars file numbered excluding the nexon
+
+-n will put numbers to the lines of file
